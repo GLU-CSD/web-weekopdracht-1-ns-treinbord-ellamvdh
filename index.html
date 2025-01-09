@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekopdracht - NS-Treinbord</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="logic.js" defer></script> <!-- Corrected script tag -->
 </head>
+
 <body>
+
     <div id="container">
         <div id="left">
-            <!-- hier komt de klok -->
+            <div id="klok">
+                <!-- hier komt de klok -->
+                <div id="outer-clock-face"></div>
+                <div id="point"></div>
+                <div id="hour-1">1</div>
+                <div id="hour-2">2</div>
+                <div id="hour-3">3</div>
+                <div id="hour-4">4</div>
+                <div id="hour-5">5</div>
+                <div id="hour-6">6</div>
+                <div id="hour-7">7</div>
+                <div id="hour-8">8</div>
+                <div id="hour-9">9</div>
+                <div id="hour-10">10</div>
+                <div id="hour-11">11</div>
+                <div id="hour-12">12</div>
+
+                
+                <div class="minute-hand-wrapper" id="minute-hand">
+                    <div class="minute-hand">
+                        <div class="m-hand"></div>
+                        <div class="m-arrow">V</div>
+                    </div>
+                </div>
+
+                <div class="hour-hand-wrapper" id="hour-hand">
+                    <div class="hour-hand" >
+                        <div class="h-hand"></div>
+                        <div class="h-arrow">V</div>
+                    </div>
+                </div>
+
+                <div class="second-hand-wrapper" id="second-hand">
+                    <div class="second-hand" id="second-hand">
+                        <div class="s-hand"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
         <div id="middle">
-            <!-- Hier komt de reizigers info -->
+            <div id="scherm">
+                <!-- Hier komt de reizigers info -->
+                <div id="tijd">1</div>
+                <div id="tijd2">minuut</div>
+
+                <div id="treinsoort">Intercity
+                    <img src="assets/img/ns_logo.png" alt="Logo" class="logo">
+                </div>
+                
+                <div id="bestemming">Heerlen</div>
+                <div id="via"> via 's-Hertogenbosch, Eindhoven</div>
+                <div id= "via2">Weert, Roermond en Sittard
+
+                </div>
+                <img src="assets/img/treinlengte.png" id= "treinlengte">
+
+
+
+            </div>
+            <div id="hierna">
+            <div id="volgende">Hierna/next: 08:53 IC Venlo</div>
+            </div>
+
         </div>
+
         <div id="right">
             <!-- hier komt het spoor nummer -->
-        </div>
-        <div id="">
+            <div id="vierkantrechts">
+                <div id="kleinblauwvierkantje"></div>
+                <div id="spoor3">spoor</div>
+                <div id="spoor">18</div>
+                <div id="spoor2">b</div>
+
+
+
+
+
+            </div>
 
         </div>
     </div>
 </body>
+
 </html>

@@ -20,6 +20,14 @@
     padding: 35px;
     box-sizing: border-box;
     border: 2px solid #000;
+
+    display:grid;
+    grid-template-areas: "tijd treinsoort logo"
+                        "bestemming bestemming"
+                        "via via"
+                        "treinlengte treinlengte"
+                        "volgende volgende";
+
 }
 
 #right{
@@ -27,4 +35,347 @@
     height: 335px;
     background-color: rgb(12, 75, 170);
     border: 2px solid #000;
+}
+
+#klok{
+    height: 195px;
+    width: 195px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: auto;
+    width: 80%;
+
+    padding: 10px;
+
+
+}
+
+#outer-clock-face{
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+
+#hour-1{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 40px;
+    left: 490px;
+}
+#hour-2{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 75px;
+    left: 520px;
+}
+#hour-3{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 115px;
+    left:530px;
+}
+#hour-4{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 160px;
+    left:520px;
+}
+#hour-5{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 190px;
+    left:490px;
+}
+#hour-6{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 200px;
+    left: 445px;
+}
+#hour-7{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 190px;
+    left: 400px;
+}
+
+#hour-8{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+
+    top: 160px;
+    left: 370px;
+}
+
+#hour-9{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 115px;
+    left: 360px;
+}
+#hour-10{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 70px;
+    left: 365px;
+}
+#hour-11{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 40px;
+    left: 392px;
+}
+#hour-12{
+    font-weight: bold;
+    color: rgb(12, 75, 170);
+    position: absolute;
+    top: 27px;
+    left: 440px;
+}
+
+
+.minute-hand-wrapper{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    /* background-color: aquamarine; */
+    top: 45px;
+    left: 375px;
+    border-radius: 50%;
+}
+.minute-hand{
+    position: relative;
+}
+
+/* minuten */
+.minute-hand .m-hand{
+    width: 4px;
+    height: 73px;
+    left: 73px;
+    top: 3px;
+    background-color: rgb(9, 67, 153);
+    position: absolute;
+
+}
+
+.minute-hand .m-arrow{
+    font-weight: bold;
+    color: rgb(9, 67, 153);
+    transform: rotate(180deg);
+    position: absolute;
+    left: 69.5px;
+    bottom: -15px;
+}
+
+
+/* uuren */
+.hour-hand-wrapper{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    /* background-color: aquamarine; */
+    top: 45px;
+    left: 375px;
+    border-radius: 50%;
+}
+.hour-hand{
+    position: relative;
+}
+.hour-hand .h-hand{
+
+    width: 4px;
+    height: 50px;
+    background-color: rgb(9, 67, 153);
+    position: absolute;
+    top:30px;
+    left: 73px;
+}
+
+.hour-hand .h-arrow{
+    font-weight:bold;
+    color: rgb(9, 67, 153);
+    transform: rotate(180deg);
+    position: absolute;
+    top: 25px;
+    left: 69.5px;
+}
+.second-hand-wrapper{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    /* background-color: aquamarine; */
+    top: 45px;
+    left: 375px;
+    border-radius: 50%;
+}
+.second-hand{
+    position: relative;
+}
+.second-hand .s-hand{
+    width: 2px;
+    height: 60px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: 20px;
+    left: 74px;
+}
+
+/* 1 minuut tot trein */
+#tijd{
+
+    grid-area: tijd;
+    font-size: 30px;
+    margin-left: 10px;
+    display: flex;
+    justify-content:space-between;
+    /* background-color: aquamarine; */
+    width: 100px;
+    color: rgb(9, 67, 153);
+
+
+}
+#tijd2{
+    position: absolute;
+    font-size: 20px;
+    left: 640px;
+    top: 56px;
+    color: rgb(9, 67, 153);
+}
+
+#treinsoort{
+
+    grid-area: treinsoort;
+    font-size: 40px;
+    margin-left: 228px;
+    /* background-color: blue; */
+    margin-top: -35px;
+    color: rgb(9, 67, 153);
+
+
+}
+
+#bestemming{
+    /* background-color: rgb(255, 255, 255); */
+    grid-area: bestemming;
+    font-size: 38px;
+    margin-left: 10px;
+    color: rgb(9, 67, 153);;
+
+}
+
+#via{
+    /* background-color: rgb(0, 255, 13); */
+    grid-area: via;
+    font-size: 20px;
+    margin-left: 10px;
+    color: rgb(9, 67, 153);;
+}
+
+#via2{
+    /* background-color: rgb(255, 0, 0); */
+    grid-area: via;
+    font-size: 20px;
+    margin-left: 10px;
+    color: rgb(9, 67, 153);;
+
+
+}
+#treinlengte{
+    grid-area: treinlengte;
+    margin-top: 65px;
+    margin-left: 70px;
+}
+
+#vierkantrechts{
+    width: 96px;
+    height: 96px;
+    background-color: white;
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#kleinblauwvierkantje{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(12, 75, 170);
+}
+
+#spoor{
+    /* 18 */
+    font-size: 48px;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: rgb(12, 75, 170);
+
+}
+
+#spoor2{
+    /* b */
+    font-size: 30px;
+    margin-left: 70px;
+    margin-top: -50px;
+    color: rgb(12, 75, 170);
+
+
+} 
+
+#spoor3{
+    /* spoor */
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 20px;
+    color: rgb(12, 75, 170);
+}
+
+#scherm{
+    width: 480px;
+    height: 240px;
+    background-color: rgb(255, 255, 255);
+
+}
+.logo{
+
+    grid-area: logo;
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: -10px;
+
+
+}
+
+#hierna{
+    width: 480px;
+    height: 25px;
+    background-color:rgb(9, 67, 153);
+
+
+}
+
+#volgende{
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(0, 110, 255); */
+    margin-left: 10px;
+    margin-top: 5px;
 }
