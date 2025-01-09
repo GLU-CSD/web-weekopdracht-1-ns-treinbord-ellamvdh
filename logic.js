@@ -73,7 +73,7 @@ setInterval(function updateTime2() {
     let minuutV = dVolgende.getMinutes();
     
     // Add 35 minutes to the current time
-    let minuutV2 = minuutV + 35;
+    let minuutV2 = minuutV + 15;
     
     // If minute exceeds 60, adjust it and add to the hour
     if (minuutV2 >= 60) {
