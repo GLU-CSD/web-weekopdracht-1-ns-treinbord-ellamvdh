@@ -62,67 +62,33 @@ function toggleBool() {
 setInterval(toggleBool, 5000);
 
 
-// {/* <div id="volgende">Hierna/next: 08:53 IC Venlo</div> */}
 
-let volgende= document.getElementById("volgende");
+let volgende = document.getElementById("volgende");
 
-
-
-
-dVolgende = new Date();
-let  uurV = d.getHours();
-let minuutV = d.getMinutes();
-let zVolgende;
-let zVolgende2;
-
-let uurV2 = uurV;
-let minuutV2= minuutV +35;
-
-setInterval(
-function updateTime2(){
-
-    if(minuutV2 >=60){
-        minuutV2= minuutV2 -60;
-        uurV2 +=1;
+// Set an interval to update the next time
+setInterval(function updateTime2() {
+    // Create a new Date object to get the current time
+    let dVolgende = new Date();
+    let uurV = dVolgende.getHours();
+    let minuutV = dVolgende.getMinutes();
+    
+    // Add 35 minutes to the current time
+    let minuutV2 = minuutV + 35;
+    
+    // If minute exceeds 60, adjust it and add to the hour
+    if (minuutV2 >= 60) {
+        minuutV2 -= 60;
+        uurV += 1;
     }
-    if(minuutV2 <=9){
-        zVolgende = "0";
-    }else{
-        zVolgende="";
-    }
-    
-    if(uurV2 <= 9){
-        zVolgende2 = "0";
-    }else{
-        zVolgende2 = "";
-    }
-    
-    
-    
-    volgende.textContent ="Hierna/next: "+zVolgende2+ uurV2 +":"+zVolgende+ minuutV2+" IC Venlo";
-},1000
-)
 
+    // Format hours and minutes with leading zeros if needed
+    let zVolgende = (minuutV2 <= 9) ? "0" : "";
+    let zVolgende2 = (uurV <= 9) ? "0" : "";
 
-// if(minuutV2 >=60){
-//     minuutV2= minuutV2 -60;
-//     uurV2 +=1;
-// }
-// if(minuutV2 <=9){
-//     zVolgende = "0";
-// }else{
-//     zVolgende="";
-// }
+    // Set the formatted time for "next"
+    volgende.textContent = "Hierna/next: " + zVolgende2 + uurV + ":" + zVolgende + minuutV2 + " IC Venlo";
+}, 1000);  // Update every second
 
-// if(uurV2 <= 9){
-//     zVolgende2 = "0";
-// }else{
-//     zVolgende2 = "";
-// }
-
-
-
-// volgende.textContent ="Hierna/next: "+zVolgende2+ uurV2 +":"+zVolgende+ minuutV2+" IC Venlo";
 
 
 
