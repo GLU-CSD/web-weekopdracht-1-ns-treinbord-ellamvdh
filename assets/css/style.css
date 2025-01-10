@@ -256,7 +256,7 @@
 #tijd2{
     position: absolute;
     font-size: 20px;
-    left: 640px;
+    left: 650px;
     top: 56px;
     color: rgb(9, 67, 153);
 }
@@ -361,7 +361,6 @@
     height: auto;
     object-fit: cover;
     margin-bottom: -10px;
-
 
 }
 
